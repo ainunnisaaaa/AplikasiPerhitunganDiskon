@@ -197,6 +197,18 @@ public class AplikasiPerhitunganDiskon extends javax.swing.JFrame {
 
     private void hargaAsliTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaAsliTextFieldActionPerformed
         // TODO add your handling code here:
+            try {
+        // Mengambil teks dari JTextField harga asli dan mengonversinya menjadi double
+        double hargaAsli = Double.parseDouble(hargaAsliTextField.getText());
+
+        // Cetak nilai untuk memastikan nilai diambil dengan benar (opsional)
+        System.out.println("Harga Asli: " + hargaAsli);
+
+        // Anda dapat menggunakan variabel hargaAsli ini untuk perhitungan lainnya
+    } catch (NumberFormatException e) {
+        // Menampilkan pesan error jika input bukan angka yang valid
+        JOptionPane.showMessageDialog(this, "Masukkan angka yang valid untuk harga asli.", "Error", JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_hargaAsliTextFieldActionPerformed
 
     private void hargaAkhirTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaAkhirTextFieldActionPerformed
