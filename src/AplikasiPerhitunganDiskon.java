@@ -27,18 +27,150 @@ public class AplikasiPerhitunganDiskon extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        hargaAsliTextField = new javax.swing.JTextField();
+        hargaAkhirTextField = new javax.swing.JTextField();
+        hargaDiskonTextField = new javax.swing.JTextField();
+        "5", "10", "15", "20",
+        diskonComboBox = new javax.swing.JComboBox<>();
+        hitungButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        diskonTextField = new javax.swing.JTextField();
+        kembaliButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 51, 102));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Aplikasi Perhitungan Diskon");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setText("Harga Asli");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setText("Harga Akhir");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel4.setText("Penghematan");
+
+        hargaAsliTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hargaAsliTextFieldActionPerformed(evt);
+            }
+        });
+
+        hargaAkhirTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hargaAkhirTextFieldActionPerformed(evt);
+            }
+        });
+
+        hargaDiskonTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hargaDiskonTextFieldActionPerformed(evt);
+            }
+        });
+
+        diskonComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        diskonComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diskonComboBoxActionPerformed(evt);
+            }
+        });
+
+        hitungButton.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        hitungButton.setText("Hitung");
+        hitungButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hitungButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel5.setText("Diskon");
+
+        kembaliButton.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        kembaliButton.setText("Kembali");
+        kembaliButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(60, 60, 60)
+                .addComponent(diskonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+                .addComponent(diskonComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(hargaAkhirTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                            .addComponent(hargaDiskonTextField)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(hitungButton)
+                        .addGap(152, 152, 152)
+                        .addComponent(kembaliButton))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(hargaAsliTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 362, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(hargaAsliTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(diskonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(diskonComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(hargaAkhirTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(hargaDiskonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hitungButton)
+                    .addComponent(kembaliButton))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -54,6 +186,34 @@ public class AplikasiPerhitunganDiskon extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void diskonComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diskonComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_diskonComboBoxActionPerformed
+
+    private void hitungButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitungButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hitungButtonActionPerformed
+
+    private void hargaAsliTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaAsliTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hargaAsliTextFieldActionPerformed
+
+    private void hargaAkhirTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaAkhirTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hargaAkhirTextFieldActionPerformed
+
+    private void hargaDiskonTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaDiskonTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hargaDiskonTextFieldActionPerformed
+
+    private void kembaliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliButtonActionPerformed
+        // TODO add your handling code here:
+        // Misalkan nama form utama adalah MainForm
+        MainForm mainForm = new MainForm();
+        mainForm.setVisible(true);
+        this.dispose();  // Menutup form saat ini
+    }//GEN-LAST:event_kembaliButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +251,18 @@ public class AplikasiPerhitunganDiskon extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> diskonComboBox;
+    private javax.swing.JTextField diskonTextField;
+    private javax.swing.JTextField hargaAkhirTextField;
+    private javax.swing.JTextField hargaAsliTextField;
+    private javax.swing.JTextField hargaDiskonTextField;
+    private javax.swing.JButton hitungButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton kembaliButton;
     // End of variables declaration//GEN-END:variables
 }
